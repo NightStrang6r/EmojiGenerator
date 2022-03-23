@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Emoji Generator</title>
+    <link rel="icon" href="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <h1 class="logo">
+        😃 Emoji Generator 😉
+    </h1>
+
+    <table class="table">
+        <tr>
+            <td id="inputs">
+                <div class="input-wrapper" id="inputs">  
+                    <p class="buttonText">🌀 Количество:</p>
+                    <input type="text" id="inputCount" class="input" value="15" placeholder="Количество" /> 
+                    <button type="button" id="generateButton">Generate</button>    
+                </div>
+            </td>
+            <td id="lists">
+                <div class="input-wrapper">  
+                    <p class="buttonText">🧾 Эмодзи:</p>
+                    <p>
+                        <span id="list">Emojis</span>
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+    <script src="script.js"></script>
+</body>
+</html>
