@@ -3,7 +3,7 @@ const listEl = document.getElementById("list");
 const inputCountEl = document.getElementById("inputCount");
 const generateButEl = document.getElementById("generateButton");
 
-generateButEl.addEventListener("click", generateEmojis);
+generateButEl.addEventListener("click", () => {generateEmojis(); setEmojiFavicon();});
 inputCountEl.addEventListener("keyup", (event) => {checkForLetters(event.target)});
 
 let count;
