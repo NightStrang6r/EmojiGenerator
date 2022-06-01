@@ -8,6 +8,8 @@ inputCountEl.addEventListener("keyup", (event) => {checkForLetters(event.target)
 
 let count;
 
+if(localStorage.lastCount) inputCountEl.value = localStorage.lastCount;
+
 setEmojiFavicon();
 generateEmojis();
 
@@ -19,6 +21,8 @@ function generateEmojis() {
         count = 18; 
         inputCountEl.value = count;
     }
+
+    localStorage.lastCount = count;
     
     for(let i = 0; i < count; i++){
         const emoji = generateEmoji();
