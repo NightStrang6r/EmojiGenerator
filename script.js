@@ -14,7 +14,6 @@ setEmojiFavicon();
 generateEmojis();
 
 function generateEmojis() {
-    listEl.innerHTML = "";
     count = inputCountEl.value;
         
     if(!count) {
@@ -23,11 +22,14 @@ function generateEmojis() {
     }
 
     localStorage.lastCount = count;
-    
+    let list = "";
+
     for(let i = 0; i < count; i++){
         const emoji = generateEmoji();
-        listEl.innerHTML = listEl.innerHTML + emoji + " ";
+        list = list + emoji + " ";
     }
+
+    listEl.innerHTML = list;
 }
 
 function setEmojiFavicon() {
